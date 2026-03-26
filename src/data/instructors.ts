@@ -1,0 +1,58 @@
+import { Instructor } from '@/types';
+
+export const instructors: Instructor[] = [
+  {
+    id: 'inst-1',
+    name: 'Sarah Chen',
+    email: 'sarah@studiosync.com',
+    phone: '(555) 101-2001',
+    photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face',
+    bio: '200-hour certified yoga instructor who believes everyone deserves a moment of calm. Expect playlists heavy on Khruangbin.',
+    classTypes: ['yoga', 'hot-yoga'],
+  },
+  {
+    id: 'inst-2',
+    name: 'Marcus Rivera',
+    email: 'marcus@studiosync.com',
+    phone: '(555) 101-2002',
+    photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face',
+    bio: 'Former competitive cyclist turned spinning and pilates evangelist. Brings the energy every single class.',
+    classTypes: ['spinning', 'pilates'],
+  },
+  {
+    id: 'inst-3',
+    name: 'Emma Larsson',
+    email: 'emma@studiosync.com',
+    phone: '(555) 101-2003',
+    photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face',
+    bio: 'Classically trained dancer who fell in love with barre and pilates. Precision meets grace in every session.',
+    classTypes: ['barre', 'pilates'],
+  },
+  {
+    id: 'inst-4',
+    name: 'David Okafor',
+    email: 'david@studiosync.com',
+    phone: '(555) 101-2004',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
+    bio: 'Multi-discipline instructor with a focus on mind-body connection. Teaching yoga, hot yoga, and spinning with equal passion.',
+    classTypes: ['yoga', 'hot-yoga', 'spinning'],
+  },
+  {
+    id: 'inst-5',
+    name: 'Lisa Park',
+    email: 'lisa@studiosync.com',
+    phone: '(555) 101-2005',
+    photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
+    bio: 'Barre and yoga specialist who creates the most welcoming studio atmosphere. Her cool-downs are legendary.',
+    classTypes: ['barre', 'yoga'],
+  },
+  {
+    id: 'inst-6',
+    name: 'Jake Thompson',
+    email: 'jake@studiosync.com',
+    phone: '(555) 101-2006',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
+    bio: 'High-intensity spinning coach and certified pilates instructor. Challenges you to find your limit, then push past it.',
+    classTypes: ['spinning', 'pilates'],
+  },
+];
