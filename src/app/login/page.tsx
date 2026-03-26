@@ -124,6 +124,7 @@ export default function LoginPage() {
                     <label className="block text-sm font-medium text-text mb-1.5">Email</label>
                     <input
                       type="email"
+                      autoComplete="email"
                       value={forgotEmail}
                       onChange={(e) => setForgotEmail(e.target.value)}
                       placeholder="you@example.com"
@@ -161,6 +162,7 @@ export default function LoginPage() {
                   <label className="block text-sm font-medium text-text mb-1.5">Email</label>
                   <input
                     type="email"
+                    autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
@@ -171,6 +173,7 @@ export default function LoginPage() {
                   <label className="block text-sm font-medium text-text mb-1.5">Password</label>
                   <input
                     type="password"
+                    autoComplete="current-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
