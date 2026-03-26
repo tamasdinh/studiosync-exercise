@@ -710,6 +710,7 @@ export default function AdminClassesPage() {
                 cls={cls}
                 instructor={instructor}
                 bookingCount={count}
+                linkInstructor={false}
                 onClick={() => { setSelectedClassId(cls.id); setSelectedClassObj(cls); }}
               />
             );

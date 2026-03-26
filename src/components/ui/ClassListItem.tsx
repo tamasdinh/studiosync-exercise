@@ -44,6 +44,7 @@ type ClassListItemProps = {
   onClick?: () => void;
   showDate?: boolean;
   showInstructor?: boolean;
+  linkInstructor?: boolean;
 };
 
 export default function ClassListItem({
@@ -60,6 +61,7 @@ export default function ClassListItem({
   onClick,
   showDate = true,
   showInstructor = true,
+  linkInstructor = true,
 }: ClassListItemProps) {
   const past = isPast(cls.date);
   const colors = CLASS_TYPE_COLORS[cls.classType];
@@ -83,13 +85,17 @@ export default function ClassListItem({
           {showInstructor && instructor && (
             <div className="flex items-center gap-2 mt-1">
               <Avatar src={instructor.photo} name={instructor.name} size={24} />
-              <Link
-                href={`/instructor/${instructor.id}`}
-                className="text-sm text-text-secondary hover:text-primary transition-colors cursor-pointer truncate"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {instructor.name}
-              </Link>
+              {linkInstructor ? (
+                <Link
+                  href={`/instructor/${instructor.id}`}
+                  className="text-sm text-text-secondary hover:text-primary transition-colors cursor-pointer truncate"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {instructor.name}
+                </Link>
+              ) : (
+                <span className="text-sm text-text-secondary truncate">{instructor.name}</span>
+              )}
               {isFavoriteInstructor && !past && (
                 <StarIcon className="w-4 h-4 text-amber-400 shrink-0" />
               )}
@@ -252,13 +258,17 @@ export default function ClassListItem({
             {showInstructor && instructor && (
               <div className="flex items-center gap-2 shrink-0 min-w-36">
                 <Avatar src={instructor.photo} name={instructor.name} size={28} />
-                <Link
-                  href={`/instructor/${instructor.id}`}
-                  className="text-sm text-text-secondary hover:text-primary transition-colors cursor-pointer truncate"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {instructor.name}
-                </Link>
+                {linkInstructor ? (
+                  <Link
+                    href={`/instructor/${instructor.id}`}
+                    className="text-sm text-text-secondary hover:text-primary transition-colors cursor-pointer truncate"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {instructor.name}
+                  </Link>
+                ) : (
+                  <span className="text-sm text-text-secondary truncate">{instructor.name}</span>
+                )}
                 {isFavoriteInstructor && !past && (
                   <StarIcon className="w-4 h-4 text-amber-400 shrink-0" />
                 )}
